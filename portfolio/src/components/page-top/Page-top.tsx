@@ -1,5 +1,5 @@
 import sahilFormal from '../../assets/sahil_formal.jpg'
-import './page-top.css'
+import './Page-top.css'
 import { TwitterBoxedSVG, LinkedInBoxedSVG, GithubBoxedSVG } from '../../assets/Svg'
 
 
