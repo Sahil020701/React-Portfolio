@@ -1,0 +1,18 @@
+h2, p{
+    color: white;
+}
+
+h2
+{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+.introductionWrapper{
+    display: flex;
+    flex-direction: column;
+}
