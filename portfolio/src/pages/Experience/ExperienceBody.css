@@ -1,11 +1,14 @@
-.experienceBodyWrapper{
-    margin-top: 1em;
+.experienceBodyWrapper {
+  margin-top: 1em;
+  width: 50%;
+  justify-items: center;
+  justify-self: center;
 }
 
-.experienceListWrapper{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 1rem;
+.experienceListWrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
 }

@@ -1,18 +1,21 @@
-h2, p{
-    color: white;
+h2,
+p {
+  color: white;
 }
 
-h2
-{
-    font-size: 2rem;
-    margin-bottom: 1rem;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-p{
-    margin-bottom: 10px;
+p {
+  margin-bottom: 10px;
 }
 
-.introductionWrapper{
-    display: flex;
-    flex-direction: column;
+.introductionWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-items: center;
+  justify-self: center;
 }
