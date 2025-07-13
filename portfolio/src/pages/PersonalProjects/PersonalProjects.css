@@ -1,0 +1,7 @@
+.PersonalProjectsListWrapper{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}

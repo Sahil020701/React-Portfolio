@@ -1,4 +1,4 @@
-import Experience from "@/components/Experience/Experience";
+import ShadCard from "@/components/ShadCard/ShadCard";
 import './ExperienceBody.css'
 
 function ExperienceBody() {
@@ -6,30 +6,16 @@ function ExperienceBody() {
     <div className="experienceBodyWrapper">
       <h2>Experience</h2>
       <div className="experienceListWrapper">
-        <Experience
+        <ShadCard
           cardHeader={<p>FinIQ Consulting - Technical Consultant</p>}
-          cardExperience={<p>Jun 2024 - Till Date</p>}
+          cardTimeline={<p>Jun 2024 - Till Date</p>}
           cardContent={
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
         />
-        <Experience
+        <ShadCard
           cardHeader={<p>FinIQ Consulting - Graduate Engineer Trainee</p>}
-          cardExperience={<p>Jan 2024 - Jun 2024</p>}
-          cardContent={
-            <p>Worked on various projects utilizing Angular and C#.</p>
-          }
-        />
-        <Experience
-          cardHeader={<p>FinIQ Consulting - Graduate Engineer Trainee</p>}
-          cardExperience={<p>Jan 2024 - Jun 2024</p>}
-          cardContent={
-            <p>Worked on various projects utilizing Angular and C#.</p>
-          }
-        />
-        <Experience
-          cardHeader={<p>FinIQ Consulting - Graduate Engineer Trainee</p>}
-          cardExperience={<p>Jan 2024 - Jun 2024</p>}
+          cardTimeline={<p>Jan 2024 - Jun 2024</p>}
           cardContent={
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
