@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import './ShadCard.css'
-import { ReactNOBoxSVG, AngularNOBoxSVG, JavaScriptNOBoxSVG } from "@/assets/Svg";
+import { ReactNOBoxSVG } from "@/assets/Svg";
 
 interface ShadCardProps {
   cardHeader: React.ReactNode;
@@ -10,7 +10,7 @@ interface ShadCardProps {
   techLogos?: React.ReactNode[];
 }
 
-function ShadCard({ cardHeader, cardTimeline, cardContent, techLogos }: ShadCardProps) {
+function ShadCard({ cardHeader, cardTimeline, cardContent }: ShadCardProps) {
   return (
     <div className="w-full min-w-[300px] max-w-[500px] mx-auto">
       <Card className="
