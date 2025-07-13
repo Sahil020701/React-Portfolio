@@ -1,9 +1,10 @@
 .pageTopWrapper{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 80px 16px 16px 16px;
     width: 50%;
-    justify-self: center;
+    position: relative;
+    left: 25%;
 }
 
 .mediaIcons{

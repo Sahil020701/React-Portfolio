@@ -15,7 +15,10 @@ p {
 .introductionWrapper {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  justify-items: center;
-  justify-self: center;
+  justify-content: center;
+  position: relative;
+  left: 25%;
+  > * {
+    width: 50%;
+  }
 }

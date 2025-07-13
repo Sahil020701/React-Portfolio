@@ -7,7 +7,7 @@
 }
 
 .shadCardWrapper{
-    /* min-width: 300px;
-    max-width: 500px; */
+    min-width: 300px;
+    max-width: 500px;
     justify-content: space-between;
 }
