@@ -13,6 +13,7 @@ function App() {
         backgroundImage: `url(${bgImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        justifySelf: 'center',
       }}>
       <div className='pageWrapper'>
         <PageTop />
