@@ -49,3 +49,9 @@
     flex-direction: column;
     padding: 0 20%;
 }
+
+@media screen and (max-width: 600px) {
+  .pageWrapper {
+    padding: 0 5%;
+  }
+}
