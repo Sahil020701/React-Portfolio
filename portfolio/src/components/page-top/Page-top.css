@@ -1,16 +1,26 @@
 .pageTopWrapper {
     display: flex;
+    justify-content: space-between;
+    padding: 40px 16px 16px 16px;
+    width: 100%;
+    margin: auto 0;
+    flex: 1;
+}
+
+.mediaIcons {
+  margin: 16px 16px 0 0;
+  display: flex;
+  gap: 16px;
+}
+@media screen and (max-width: 600px) {
+  .pageTopWrapper {
+    display: flex;
     justify-content: center;
-    padding: 80px 16px 16px 16px;
+    padding: 30px 16px 16px 16px;
     width: 100%;
     margin: auto 0;
     flex: 1;
     justify-self: center;
     gap: 7.5vw;
-}
-
-.mediaIcons {
-    margin: 16px 16px 0 0;
-    display: flex;
-    gap: 16px;
+  }
 }
