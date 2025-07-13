@@ -4,9 +4,10 @@
 }
 
 .experienceListWrapper {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 1rem;
+    display: flex;
+    min-width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    justify-self: center;
 }
