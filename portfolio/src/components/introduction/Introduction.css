@@ -16,9 +16,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
-  left: 25%;
-  > * {
     width: 50%;
-  }
+    margin: auto;
+    flex: 1;
 }

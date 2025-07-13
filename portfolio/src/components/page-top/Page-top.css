@@ -1,13 +1,13 @@
-.pageTopWrapper{
+.pageTopWrapper {
     display: flex;
     justify-content: space-between;
     padding: 80px 16px 16px 16px;
     width: 50%;
-    position: relative;
-    left: 25%;
+    margin: auto;
+    flex: 1;
 }
 
-.mediaIcons{
+.mediaIcons {
     margin: 16px 16px 0 0;
     display: flex;
     gap: 16px;
