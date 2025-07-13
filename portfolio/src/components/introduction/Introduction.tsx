@@ -1,9 +1,11 @@
-import './Introduction.css'
+import "./Introduction.css";
 
 function Introduction() {
   return (
     <div className="introductionWrapper">
-      <h2>Hi, I'm Sahil</h2>
+      <h2>
+        Hi, I'm <span style={{ color: "#3e86cb" }}>Sahil</span>
+      </h2>
       <p>
         I'm a software engineer with a passion for building impactful
         applications.

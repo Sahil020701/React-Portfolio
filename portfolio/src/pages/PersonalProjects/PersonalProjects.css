@@ -1,3 +1,7 @@
+.PersonalProjectsBodyWrapper{
+    margin-top: 1.5em;
+}
+
 .PersonalProjectsListWrapper{
     display: flex;
     width: 100%;

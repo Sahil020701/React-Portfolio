@@ -1,3 +1,7 @@
+.experienceBodyWrapper{
+    margin-top: 1em;
+}
+
 .experienceListWrapper{
     display: flex;
     width: 100%;

@@ -1,16 +1,50 @@
 import { Card, CardHeader, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
 import './ShadCard.css'
-import { ReactNOBoxSVG } from "@/assets/Svg";
+import { ReactNOBoxSVG, AngularNOBoxSVG, JavaScriptNOBoxSVG, TypeScriptNOBoxSVG, CSharpNOBoxSVG } from "@/assets/Svg";
 
 interface ShadCardProps {
   cardHeader: React.ReactNode;
   cardTimeline?: React.ReactNode;
   cardContent: React.ReactNode;
-  techLogos?: React.ReactNode[];
+  techStack?: string[];
 }
 
-function ShadCard({ cardHeader, cardTimeline, cardContent }: ShadCardProps) {
+function ShadCard({ cardHeader, cardTimeline, cardContent, techStack = [] }: ShadCardProps) {
+  
+  // Tech stack configuration mapping
+  const techConfig: Record<string, {
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    label: string;
+    color: string;
+  }> = {
+    react: {
+      icon: ReactNOBoxSVG,
+      label: "React",
+      color: "hover:border-blue-400/60 hover:text-blue-200"
+    },
+    angular: {
+      icon: AngularNOBoxSVG,
+      label: "Angular",
+      color: "hover:border-red-400/60 hover:text-red-200"
+    },
+    javascript: {
+      icon: JavaScriptNOBoxSVG,
+      label: "JavaScript",
+      color: "hover:border-yellow-400/60 hover:text-yellow-200"
+    },
+    typescript: {
+      icon: TypeScriptNOBoxSVG,
+      label: "TypeScript",
+      color: "hover:border-blue-400/60 hover:text-blue-200"
+    },
+    csharp: {
+      icon: CSharpNOBoxSVG,
+      label: "CSharp",
+      color: "hover:border-violet-400/60 hover:text-violet-200"
+    },
+  };
+
   return (
     <div className="w-full min-w-[300px] max-w-[500px] mx-auto">
       <Card className="
@@ -27,17 +61,46 @@ function ShadCard({ cardHeader, cardTimeline, cardContent }: ShadCardProps) {
           <h3 className="text-lg font-semibold text-slate-100 group-hover:text-white transition-all duration-300 group-hover:tracking-wide">
             {cardHeader}
           </h3>
-          <p className="text-sm text-slate-400 group-hover:text-slate-200 transition-all duration-300 italic group-hover:translate-x-1">
-            {cardTimeline}
-          </p>
+          {cardTimeline && (
+            <span className="text-sm text-slate-400 group-hover:text-slate-200 transition-all duration-300 italic group-hover:translate-x-1">
+              {cardTimeline}
+            </span>
+          )}
         </CardHeader>
-        <CardContent className="pt-0 relative z-10">
+        <CardContent className="pt-0 relative z-10 space-y-4">
           <div className="text-slate-200 leading-relaxed group-hover:text-slate-50 transition-all duration-300">
             {cardContent}
           </div>
-          <Button variant="outline" size="sm" className="bg-slate-800/50 backdrop-blur-sm border-slate-600/40 text-slate-200 hover:bg-slate-700/85 hover:border-slate-500/60 hover:text-slate-50 hover:shadow-lg hover:shadow-black/20 transition-all duration-300">
-            <ReactNOBoxSVG style={{ width: 20, height: 20}} /> React
-          </Button>
+          
+          {/* Tech Stack Buttons */}
+          {techStack.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {techStack.map((tech, index) => {
+                const techInfo = techConfig[tech.toLowerCase()];
+                
+                if (!techInfo) return null;
+                
+                const IconComponent = techInfo.icon;
+                
+                return (
+                  <Button 
+                    key={index}
+                    variant="outline" 
+                    size="sm" 
+                    className={`
+                      bg-slate-800/50 backdrop-blur-sm border-slate-600/40 text-slate-200 
+                      hover:bg-slate-700/85 hover:shadow-lg hover:shadow-black/20 
+                      transition-all duration-300 gap-2 text-xs
+                      ${techInfo.color}
+                    `}
+                  >
+                    <IconComponent style={{ width: 16, height: 16 }} />
+                    {techInfo.label}
+                  </Button>
+                );
+              })}
+            </div>
+          )}
         </CardContent>
         
         {/* Glassmorphism overlay */}

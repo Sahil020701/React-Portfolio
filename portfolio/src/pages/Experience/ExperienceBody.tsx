@@ -4,7 +4,7 @@ import './ExperienceBody.css'
 function ExperienceBody() {
   return (
     <div className="experienceBodyWrapper">
-      <h2>Experience</h2>
+      <h2 style={{ color: "#3e86cb" }}>Experience</h2>
       <div className="experienceListWrapper">
         <ShadCard
           cardHeader={<p>FinIQ Consulting - Technical Consultant</p>}
@@ -12,6 +12,7 @@ function ExperienceBody() {
           cardContent={
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
+          techStack = {['Angular', 'CSharp', 'TypeScript']}
         />
         <ShadCard
           cardHeader={<p>FinIQ Consulting - Graduate Engineer Trainee</p>}
@@ -19,6 +20,7 @@ function ExperienceBody() {
           cardContent={
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
+          techStack = {['Angular', 'CSharp']}
         />
       </div>
     </div>
