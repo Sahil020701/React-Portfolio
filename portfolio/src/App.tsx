@@ -15,7 +15,7 @@ function App() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
-        <VerticalProgress className="fixed left-[8vw]" />
+        <VerticalProgress />
       <div className='pageWrapper'>
         <PageTop />
         <Introduction />

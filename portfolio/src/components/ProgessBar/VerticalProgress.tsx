@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function VerticalProgress({ className = "" }) {
+function VerticalProgress() {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function VerticalProgress({ className = "" }) {
 
   return (
     <div
-      className={`fixed h-[75vh] top-[15vh] left-[8vw] w-1 z-50 pointer-events-none ${className}`}
+      className={`fixed h-[75vh] top-[15vh] left-[5vw] w-1 z-50 pointer-events-none`}
       style={{}}
     >
       <div className="relative h-full w-full">
