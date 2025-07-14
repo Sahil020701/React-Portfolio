@@ -8,6 +8,6 @@
 
 .shadCardWrapper{
     min-width: 300px;
-    max-width: 500px;
+    max-width: calc(50% - 3em);
     justify-content: space-between;
 }

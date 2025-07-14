@@ -16,7 +16,7 @@ function VerticalProgress() {
 
   return (
     <div
-      className={`fixed h-[75vh] top-[15vh] left-[3vw] w-1 z-50 pointer-events-none`}
+      className={`fixed h-[75vh] top-[15vh] left-[2.5vw] w-1 z-50 pointer-events-none`}
       style={{}}
     >
       <div className="relative h-full w-full">
