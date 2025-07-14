@@ -3,6 +3,7 @@ import PageTop from './components/page-top/Page-top'
 import Introduction from './components/introduction/Introduction'
 import ExperienceBody from './pages/Experience/ExperienceBody'
 import PersonalProjectsBody from './pages/PersonalProjects/PersonalProjects'
+import VerticalProgress from './components/ProgessBar/VerticalProgress'
 import './App.css'
 
 function App() {
@@ -14,10 +15,15 @@ function App() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
+        <VerticalProgress className="fixed left-[8vw]" />
       <div className='pageWrapper'>
         <PageTop />
         <Introduction />
         <ExperienceBody />
+        <ExperienceBody />
+        <ExperienceBody />
+        <PersonalProjectsBody />
+        <PersonalProjectsBody />
         <PersonalProjectsBody />
 
       </div>
