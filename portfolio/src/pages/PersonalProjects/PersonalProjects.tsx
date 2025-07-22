@@ -13,6 +13,7 @@ function PersonalProjectsBody() {
             <p>Built using React.</p>
           }
           techStack = {['React', 'ShadCn']}
+          onClick={() => window.open('https://github.com/Sahil020701/React-Portfolio/tree/main/portfolio', '_blank')}
         />
         <ShadCard
           cardHeader={<p>OPStackk</p>}

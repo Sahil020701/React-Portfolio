@@ -16,6 +16,7 @@ interface ShadCardProps {
   cardTimeline?: React.ReactNode;
   cardContent: React.ReactNode;
   techStack?: string[];
+  onClick?: any;
 }
 
 function ShadCard({
@@ -23,6 +24,7 @@ function ShadCard({
   cardTimeline,
   cardContent,
   techStack = [],
+  onClick
 }: ShadCardProps) {
   const [isPressed, setIsPressed] = useState(false);
 
@@ -85,6 +87,7 @@ function ShadCard({
   return (
     <div className="w-full min-w-[300px] max-w-[500px] mx-auto">
       <Card
+        onClick={onClick}
         className={`
           relative backdrop-blur-md bg-slate-800/60 border border-slate-700/60 
           hover:bg-gradient-to-br hover:from-purple-900 hover:to-blue-900
