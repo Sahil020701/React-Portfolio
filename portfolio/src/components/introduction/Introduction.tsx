@@ -11,12 +11,7 @@ function Introduction() {
         applications.
       </p>
       <p>
-        A results-driven and detail-oriented Software Engineer with hands-on
-        experience in full-stack development within the fintech domain.
-        Proficient in C#, Angular, .NET Core, C#, and SQL, with hands-on
-        experience in developing a range of applications. Currently working at
-        FinIQ Consulting, delivering client-centric solutions and contributing
-        to the successful deployment of enterprise-grade systems.
+        Hi, I'm Sahil, a Software Engineer passionate about building impactful full-stack applications. I specialize in C#, .NET Core, Angular, and SQL, with hands-on experience in developing client-focused, enterprise-grade solutions in the fintech domain.
       </p>
     </div>
   );
