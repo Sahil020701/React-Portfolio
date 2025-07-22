@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+.svg-icons {
+  transition: transform 0.2s, filter 0.2s;
+}
+.svg-icons:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px #3e86cb);
+}
+html {
+  scroll-behavior: smooth;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

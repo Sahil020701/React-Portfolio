@@ -8,6 +8,7 @@ import {
   JavaScriptNOBoxSVG,
   TypeScriptNOBoxSVG,
   CSharpNOBoxSVG,
+  ShadCnNOBoxSVG,
 } from "@/assets/Svg";
 
 interface ShadCardProps {
@@ -64,6 +65,12 @@ function ShadCard({
       color:
         "hover:border-violet-400/60 hover:text-violet-200 active:border-violet-400/60 active:text-violet-200",
     },
+    shadcn: {
+      icon: ShadCnNOBoxSVG,
+      label: "ShadCn",
+      color:
+        "hover:border-blue-400/60 hover:text-blue-200 active:border-blue-400/60 active:text-blue-200",
+    },
   };
 
   const handleTouchStart = () => {
@@ -79,21 +86,23 @@ function ShadCard({
     <div className="w-full min-w-[300px] max-w-[500px] mx-auto">
       <Card
         className={`
-          relative backdrop-blur-md bg-slate-700/35 border border-slate-600/40 
-          hover:bg-slate-700/85 hover:border-slate-500/60 
+          relative backdrop-blur-md bg-slate-800/60 border border-slate-700/60 
+          hover:bg-gradient-to-br hover:from-purple-900 hover:to-blue-900
+          hover:border-slate-600/80 
           hover:-translate-y-1 hover:scale-[1.01] 
-          active:bg-slate-700/85 active:border-slate-500/60 
+          active:bg-gradient-to-br active:from-purple-950 active:to-blue-950
+          active:border-slate-600/80 
           active:-translate-y-1 active:scale-[1.01] 
           transition-all duration-300 ease-out
-          hover:shadow-2xl hover:shadow-black/50
-          active:shadow-2xl active:shadow-black/50
+          hover:shadow-2xl hover:shadow-black/60
+          active:shadow-2xl active:shadow-black/60
           cursor-pointer group
-          before:absolute before:inset-0 before:bg-gradient-to-br before:from-slate-600/15 before:to-transparent before:rounded-lg before:pointer-events-none
-          hover:before:from-slate-500/25 hover:before:to-slate-600/10
-          active:before:from-slate-500/25 active:before:to-slate-600/10
+          before:absolute before:inset-0 before:bg-gradient-to-br before:from-slate-700/25 before:to-transparent before:rounded-lg before:pointer-events-none
+          hover:before:from-slate-700/35 hover:before:to-slate-800/20
+          active:before:from-slate-700/35 active:before:to-slate-800/20
           ${
             isPressed
-              ? "bg-slate-700/85 border-slate-500/60 -translate-y-1 scale-[1.01] shadow-2xl shadow-black/50"
+              ? "bg-gradient-to-br from-purple-950 to-blue-950 border-slate-600/80 -translate-y-1 scale-[1.01] shadow-2xl shadow-black/60"
               : ""
           }
         `}

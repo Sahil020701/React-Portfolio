@@ -20,11 +20,9 @@ function App() {
         <PageTop />
         <Introduction />
         <ExperienceBody />
-        <ExperienceBody />
-        <ExperienceBody />
+
         <PersonalProjectsBody />
-        <PersonalProjectsBody />
-        <PersonalProjectsBody />
+
 
       </div>
     </div>
