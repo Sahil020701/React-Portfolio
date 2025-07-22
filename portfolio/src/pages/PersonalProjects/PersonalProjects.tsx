@@ -8,7 +8,7 @@ function PersonalProjectsBody() {
       <div className="PersonalProjectsListWrapper">
         <ShadCard
           cardHeader={<p>Personal Project - Portfolio Website</p>}
-          cardTimeline={<p>Jul 2025</p>}
+          cardTimeline={<p>July 2025</p>}
           cardContent={
             <p>Built using React.</p>
           }
@@ -17,9 +17,11 @@ function PersonalProjectsBody() {
         />
         <ShadCard
           cardHeader={<p>OPStackk</p>}
+          cardTimeline={<p>June 2025</p>}
           cardContent={
             <p>Backend focused project using nodeJS.</p>
           }
+          techStack={['Node', 'React']}
         />
       </div>
     </div>
