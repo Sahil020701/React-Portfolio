@@ -93,115 +93,115 @@ function ShadCard({
 
   return (
     <div className="w-full min-w-[300px] max-w-[500px] mx-auto">
-        <Card
-          onClick={onClick}
-          className={`
-          relative backdrop-blur-md bg-slate-800/60 border border-slate-700/60 
-          hover:bg-gradient-to-br hover:from-purple-900 hover:to-blue-900
-          hover:border-slate-600/80 
+      <Card
+        onClick={onClick}
+        className={`
+          relative backdrop-blur-md bg-slate-900/10 border border-slate-900/30 
+          hover:bg-gradient-to-br hover:from-purple-950 hover:to-blue-950
+          hover:border-slate-900/50 
           hover:-translate-y-1 hover:scale-[1.01] 
           active:bg-gradient-to-br active:from-purple-950 active:to-blue-950
-          active:border-slate-600/80 
+          active:border-slate-900/50 
           active:-translate-y-1 active:scale-[1.01] 
           transition-all duration-300 ease-out
           hover:shadow-2xl hover:shadow-black/60
           active:shadow-2xl active:shadow-black/60
           cursor-pointer group
-          before:absolute before:inset-0 before:bg-gradient-to-br before:from-slate-700/25 before:to-transparent before:rounded-lg before:pointer-events-none
-          hover:before:from-slate-700/35 hover:before:to-slate-800/20
-          active:before:from-slate-700/35 active:before:to-slate-800/20
+          before:absolute before:inset-0 before:bg-gradient-to-br before:from-slate-900/25 before:to-transparent before:rounded-lg before:pointer-events-none
+          hover:before:from-slate-900/35 hover:before:to-slate-900/20
+          active:before:from-slate-900/35 active:before:to-slate-900/20
           ${
             isPressed
-              ? "bg-gradient-to-br from-purple-950 to-blue-950 border-slate-600/80 -translate-y-1 scale-[1.01] shadow-2xl shadow-black/60"
+              ? "bg-gradient-to-br from-purple-950 to-blue-950 border-slate-900/50 -translate-y-1 scale-[1.01] shadow-2xl shadow-black/60"
               : ""
           }
         `}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          <CardHeader className="space-y-2 pb-4 relative z-10">
-            <h3
-              className={`
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <CardHeader className="space-y-2 pb-4 relative z-10">
+          <h3
+            className={`
             text-lg font-semibold text-slate-100 
             group-hover:text-white group-active:text-white 
             transition-all duration-300 
             group-hover:tracking-wide group-active:tracking-wide
             ${isPressed ? "text-white tracking-wide" : ""}
           `}
-            >
-              {cardHeader}
-            </h3>
-            {cardTimeline && (
-              <span
-                className={`
+          >
+            {cardHeader}
+          </h3>
+          {cardTimeline && (
+            <span
+              className={`
               text-sm text-slate-400 
               group-hover:text-slate-200 group-active:text-slate-200 
               transition-all duration-300 italic 
               group-hover:translate-x-1 group-active:translate-x-1
               ${isPressed ? "text-slate-200 translate-x-1" : ""}
             `}
-              >
-                {cardTimeline}
-              </span>
-            )}
-          </CardHeader>
-          <CardContent className="pt-0 relative z-10 space-y-4">
-            <div
-              className={`
+            >
+              {cardTimeline}
+            </span>
+          )}
+        </CardHeader>
+        <CardContent className="pt-0 relative z-10 space-y-4">
+          <div
+            className={`
             text-slate-200 leading-relaxed 
             group-hover:text-slate-50 group-active:text-slate-50 
             transition-all duration-300
             ${isPressed ? "text-slate-50" : ""}
           `}
-            >
-              {cardContent}
-            </div>
+          >
+            {cardContent}
+          </div>
 
-            {/* Tech Stack Buttons */}
-            {techStack.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {techStack.map((tech, index) => {
-                  const techInfo = techConfig[tech.toLowerCase()];
+          {/* Tech Stack Buttons */}
+          {techStack.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {techStack.map((tech, index) => {
+                const techInfo = techConfig[tech.toLowerCase()];
 
-                  if (!techInfo) return null;
+                if (!techInfo) return null;
 
-                  const IconComponent = techInfo.icon;
+                const IconComponent = techInfo.icon;
 
-                  return (
-                    <Button
-                      key={index}
-                      variant="outline"
-                      size="sm"
-                      className={`
+                return (
+                  <Button
+                    key={index}
+                    variant="outline"
+                    size="sm"
+                    className={`
                       bg-slate-800/50 backdrop-blur-sm border-slate-600/40 text-slate-200 
                       hover:bg-slate-700/85 hover:shadow-lg hover:shadow-black/20 
                       active:bg-slate-700/85 active:shadow-lg active:shadow-black/20 
                       transition-all duration-300 gap-2 text-xs
                       ${techInfo.color}
                     `}
-                    >
-                      <IconComponent style={{ width: 16, height: 16 }} />
-                      {techInfo.label}
-                    </Button>
-                  );
-                })}
-              </div>
-            )}
-          </CardContent>
+                  >
+                    <IconComponent style={{ width: 16, height: 16 }} />
+                    {techInfo.label}
+                  </Button>
+                );
+              })}
+            </div>
+          )}
+        </CardContent>
 
-          {/* Glassmorphism overlay */}
-          <div
-            className={`
+        {/* Glassmorphism overlay */}
+        <div
+          className={`
           absolute inset-0 bg-gradient-to-br from-white/8 to-transparent rounded-lg 
           opacity-70 group-hover:opacity-30 group-active:opacity-30 
           transition-opacity duration-500 pointer-events-none
           ${isPressed ? "opacity-30" : ""}
         `}
-          />
+        />
 
-          {/* Animated border glow */}
-          <div
-            className={`
+        {/* Animated border glow */}
+        <div
+          className={`
             absolute inset-0 rounded-lg bg-gradient-to-r from-slate-400/15 via-slate-300/15 to-slate-400/15 
             group-hover:from-slate-400/8 group-hover:via-slate-300/8 group-hover:to-slate-400/8 
             group-active:from-slate-400/8 group-active:via-slate-300/8 group-active:to-slate-400/8 
@@ -210,8 +210,8 @@ function ShadCard({
               isPressed ? "from-slate-400/8 via-slate-300/8 to-slate-400/8" : ""
             }
           `}
-          />
-        </Card>
+        />
+      </Card>
     </div>
   );
 }
