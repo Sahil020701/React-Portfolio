@@ -10,20 +10,6 @@
 }
 html {
   scroll-behavior: smooth;
-  div,img{
-    animation: spinInfinite 25s linear infinite;
-    
-  }
-  animation: spinInfinite 25s linear infinite;
-img{
-      animation: spinInfinite 1s linear infinite;
-
-    }
-}
-@keyframes spinInfinite {
-  to {
-    transform: rotate(1080deg);
-  }
 }
 
 @custom-variant dark (&:is(.dark *));
