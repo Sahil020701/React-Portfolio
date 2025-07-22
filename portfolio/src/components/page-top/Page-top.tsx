@@ -9,7 +9,7 @@ function PageTop() {
 
       <div className='pageTopWrapper'>
         
-          <img style={{ height: '200px', width: 'auto', borderRadius: '8px' }} src={sahilFormal} alt="Sahil Formal" />
+          <img className="formal-image-spin" style={{ height: '200px', width: 'auto', borderRadius: '8px' }} src={sahilFormal} alt="Sahil Formal" />
           <div className='mediaIcons'>
             <GithubBoxedSVG className='svg-icons' onClick={() => window.open('https://github.com/Sahil020701', '_blank')} />
             <LinkedInBoxedSVG className='svg-icons' onClick={() => window.open('https://www.linkedin.com/in/sahil-gobade-6bbb27219/', '_blank')} style={{ width: 40, height: 40, color: 'white' }} />

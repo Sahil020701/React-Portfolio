@@ -7,6 +7,17 @@
     flex: 1;
 }
 
+.formal-image-spin:hover {
+  animation: spinInfinite 2.5s linear infinite;
+}
+
+@keyframes spinInfinite {
+  to {
+    transform: rotate(1080deg);
+  }
+}
+
+
 .mediaIcons {
   margin: 16px 16px 0 0;
   display: flex;
