@@ -11,7 +11,7 @@ function Introduction() {
         applications.
       </p>
       <p>
-        Hi, I'm Sahil, a Software Engineer passionate about building impactful full-stack applications. I specialize in C#, .NET Core, Angular, and SQL, with hands-on experience in developing client-focused, enterprise-grade solutions in the fintech domain.
+        Hi, I'm Sahil, a Software Engineer passionate about building impactful full-stack applications. I specialize in C#, .NET Core, Angular, and SQL, with hands-on experience in developing client-focused, enterprise-grade solutions and the fintech domain.
       </p>
     </div>
   );

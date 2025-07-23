@@ -12,7 +12,7 @@ function ExperienceBody() {
           cardContent={
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
-          techStack = {['Angular', 'CSharp', 'TypeScript']}
+          techStack = {['Angular', 'CSharp', 'TypeScript', 'SQL']}
         />
         <ShadCard
           cardHeader={<p>FinIQ Consulting - Graduate Engineer Trainee</p>}
@@ -20,7 +20,7 @@ function ExperienceBody() {
           cardContent={
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
-          techStack = {['Angular', 'CSharp']}
+          techStack = {['Angular', 'CSharp', 'SQL']}
         />
       </div>
     </div>

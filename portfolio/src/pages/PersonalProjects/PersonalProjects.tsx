@@ -14,6 +14,7 @@ function PersonalProjectsBody() {
           }
           techStack = {['React', 'ShadCn']}
           onClick={() => window.open('https://github.com/Sahil020701/React-Portfolio/tree/main/portfolio', '_blank')}
+          progressStatus={['Ongoing']}
         />
         <ShadCard
           cardHeader={<p>OPStackk</p>}
@@ -22,6 +23,8 @@ function PersonalProjectsBody() {
             <p>Backend focused project using nodeJS.</p>
           }
           techStack={['Node', 'React']}
+          onClick={() => window.open('https://github.com/orgs/OPStackk/repositories', '_blank')}
+          progressStatus={['Complete']}
         />
       </div>
     </div>

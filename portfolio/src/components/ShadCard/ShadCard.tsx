@@ -10,6 +10,9 @@ import {
   CSharpNOBoxSVG,
   ShadCnNOBoxSVG,
   NodeNOBoxSVG,
+  WorkInProgressSVG,
+  WorkCompleteSVG,
+  SQLSVG,
 } from "@/assets/Svg";
 
 interface ShadCardProps {
@@ -18,6 +21,7 @@ interface ShadCardProps {
   cardContent: React.ReactNode;
   techStack?: string[];
   onClick?: any;
+  progressStatus?: string[];
 }
 
 function ShadCard({
@@ -26,6 +30,7 @@ function ShadCard({
   cardContent,
   techStack = [],
   onClick,
+  progressStatus = [],
 }: ShadCardProps) {
   const [isPressed, setIsPressed] = useState(false);
 
@@ -80,6 +85,35 @@ function ShadCard({
       color:
         "hover:border-green-400/60 hover:text-green-200 active:border-green-400/60 active:text-green-200",
     },
+    sql: {
+      icon: SQLSVG,
+      label: "SQL",
+      color:
+        "hover:border-green-400/60 hover:text-green-200 active:border-green-400/60 active:text-green-200",
+    },
+  };
+
+
+  const StatusConfig: Record<
+    string,
+    {
+      icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+      label: string;
+      color: string;
+    }
+  > = {
+    ongoing: {
+      icon: WorkInProgressSVG,
+      label: "Ongoing",
+      color:
+        "hover:border-blue-400/60 hover:text-blue-200 active:border-blue-400/60 active:text-blue-200",
+    },
+    complete: {
+      icon: WorkCompleteSVG,
+      label: "Complete",
+      color:
+        "hover:border-blue-400/60 hover:text-blue-200 active:border-blue-400/60 active:text-blue-200",
+    },
   };
 
   const handleTouchStart = () => {
@@ -120,17 +154,49 @@ function ShadCard({
         onTouchEnd={handleTouchEnd}
       >
         <CardHeader className="space-y-2 pb-4 relative z-10">
-          <h3
-            className={`
-            text-lg font-semibold text-slate-100 
-            group-hover:text-white group-active:text-white 
-            transition-all duration-300 
-            group-hover:tracking-wide group-active:tracking-wide
-            ${isPressed ? "text-white tracking-wide" : ""}
-          `}
-          >
-            {cardHeader}
-          </h3>
+          <div className="flex items-center justify-between">
+            <h3
+              className={`
+              text-lg font-semibold text-slate-100 
+              group-hover:text-white group-active:text-white 
+              transition-all duration-300 
+              group-hover:tracking-wide group-active:tracking-wide
+              ${isPressed ? "text-white tracking-wide" : ""}
+            `}
+            >
+              {cardHeader}
+            </h3>
+            <div>
+              <div className="flex flex-wrap gap-2">
+                {progressStatus.map((status, index) => {
+                  const StatusInfo = StatusConfig[status.toLowerCase()];
+
+                  if (!StatusInfo) return null;
+
+                  const IconComponent = StatusInfo.icon;
+
+                  return (
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="sm"
+                      className={`
+                        bg-slate-800/50 backdrop-blur-sm border-slate-600/40 text-slate-200 
+                        hover:bg-slate-700/85 hover:shadow-lg hover:shadow-black/20 
+                        active:bg-slate-700/85 active:shadow-lg active:shadow-black/20 
+                        transition-all duration-300 gap-2 text-xs
+                        ${StatusInfo.color}
+                      `}
+                    >
+                      <IconComponent style={{ width: 16, height: 16 }} />
+                      {StatusInfo.label}
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+
+          </div>
           {cardTimeline && (
             <span
               className={`
