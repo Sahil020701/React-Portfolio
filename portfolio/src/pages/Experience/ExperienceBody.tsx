@@ -13,6 +13,7 @@ function ExperienceBody() {
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
           techStack = {['Angular', 'CSharp', 'TypeScript', 'SQL']}
+          onClick={() => window.open('https://www.finiq.com/HomePage/home.html', '_blank')}
         />
         <ShadCard
           cardHeader={<p>FinIQ Consulting - Graduate Engineer Trainee</p>}
@@ -21,6 +22,7 @@ function ExperienceBody() {
             <p>Worked on various projects utilizing Angular and C#.</p>
           }
           techStack = {['Angular', 'CSharp', 'SQL']}
+          onClick={() => window.open('https://www.finiq.com/HomePage/home.html', '_blank')}
         />
       </div>
     </div>

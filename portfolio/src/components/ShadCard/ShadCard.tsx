@@ -130,7 +130,7 @@ function ShadCard({
       <Card
         onClick={onClick}
         className={`
-          relative backdrop-blur-md bg-slate-900/10 border border-slate-900/30 
+          relative backdrop-blur-md bg-slate-900/10 border border-slate-100/30 
           hover:bg-gradient-to-br hover:from-purple-950 hover:to-blue-950
           hover:border-slate-900/50 
           hover:-translate-y-1 hover:scale-[1.01] 
